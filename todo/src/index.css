@@ -1,13 +1,39 @@
 body {
-  background-color: #2c2f33; 
+  background-color: #2c2f33;
   color: #00ff99;
-  font-family: 'Black Ops One', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif; /* Optional army-tech font */
+  position: relative;
 }
+
+/* Animated Radar Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(#00ff9955 1px, transparent 1px),
+    radial-gradient(#00ff9922 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px;
+  animation: scanGrid 10s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes scanGrid {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 100px 100px, 200px 200px; }
+}
+
 
 .text-align{
   text-align: center;
   margin: 50px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .features-container {
@@ -20,14 +46,14 @@ body {
 }
 
 .feature1 {
-  flex: 1 1 200px;
+  flex:200px;
   max-width: 250px;
-  background-color: #23272a; /* Darker than body */
+  background-color: #23272a; 
   padding: 15px;
   border-radius: 12px;
-  border: 1px solid #00ff99; /* Neon border */
-  box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); /* Subtle glow */
-  color: #00ff99; /* Match body text */
+  border: 1px solid #00ff99; 
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.2); 
+  color: #00ff99; 
   text-align: center;
   transition: transform 0.2s, box-shadow 0.3s;
 }
@@ -36,8 +62,7 @@ body {
   box-shadow: 0 0 15px rgba(0, 255, 153, 0.4);
 }
 .animated {
-
-  height: 100px;
+  height: 110px;
   margin-left: 10px;
   margin-bottom: 10px;
   mix-blend-mode: multiply;
@@ -49,3 +74,52 @@ body {
   50% { transform: scale(1.03); }
   100% { transform: scale(1); }
 }
+
+.fixed-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 999; /* stay above all other elements */
+}
+
+/* Button styling */
+.mission-button {
+  background-color: #23272a;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.2);
+  text-transform: uppercase;
+}
+
+.mission-button:hover {
+  background-color: #00ff99;
+  color: #23272a;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+  transform: translateY(-3px);
+}
+
+.animated-btn {
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+  animation: bounce 2s infinite ease-in-out;
+  mix-blend-mode: multiply;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
