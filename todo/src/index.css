@@ -123,3 +123,63 @@ body::before {
   50% { transform: translateY(-5px); }
 }
 
+@media (max-width: 768px) {
+  .text-align {
+    margin: 20px;
+    padding: 5px;
+  }
+
+  .features-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .feature1 {
+    flex: 1 1 100%;
+    max-width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .mission-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .animated-btn {
+    width: 40px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .animated-btn {
+    width: 35px;
+    height: 20px;
+  }
+
+  .feature1 {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .features-container {
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
