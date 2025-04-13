@@ -45,14 +45,14 @@ function Home() {
               <NavLink to={"/add"} > 
                 <button className="mission-button">
                 <img className="animated-btn" src={GranadeGif} alt="Mission animation" />
-                New Operation
+                Task Deployment
               </button>
               </NavLink>
               
   <NavLink to={"/show"}  >
   <button className="mission-button">
     <img className="animated-btn" src={checkGif} alt="Mission animation" />
-    Mission Dashboard
+    Mission Log
   </button>
   </NavLink>
   

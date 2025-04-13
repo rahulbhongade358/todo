@@ -1,0 +1,97 @@
+.add-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #1e1f22;
+    border: 2px solid #00ff99;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+    color: #00ff99;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+  }
+  
+  .add-container h1 {
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #00ff99;
+  }
+  
+
+  .mission-input {
+    width: 90%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    background-color: #2c2f33;
+    border: 2px solid #00ff99;
+    border-radius: 8px;
+    color: #00ff99;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .mission-input::placeholder {
+    color: #00ff9977;
+  }
+  
+  .mission-input:focus {
+    border-color: #00ffaa;
+    box-shadow: 0 0 10px #00ffaa;
+  }
+  
+
+  .mission-input-select {
+    background-color: #2c2f33;
+  }
+  
+
+  .btn-add {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #23272a;
+    border: 2px solid #00ff99;
+    border-radius: 8px;
+    color: #00ff99;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .btn-add:hover {
+    background-color: #00ff99;
+    color: #23272a;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.4);
+    transform: translateY(-2px);
+  }
+  
+
+  .fixed-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+  }
+  
+  .mission-button {
+    background-color: #23272a;
+    color: #00ff99;
+    border: 2px solid #00ff99;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .mission-button:hover {
+    background-color: #00ff99;
+    color: #23272a;
+  }
+  
