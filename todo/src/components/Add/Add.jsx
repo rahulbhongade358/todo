@@ -5,24 +5,24 @@ function Add() {
   const [title, settitle] = useState("")
   const [Description, setDescription] = useState("")
   const [category, setcategory] = useState("")
-  const addnote = () =>{
-    const notes= JSON.parse(localStorage.getItem("notes")) || [];
+  const missions = () =>{
+    const existingmissions= JSON.parse(localStorage.getItem("missions")) || [];
 
-    const noteObject = {
+    const newmissions = {
       title,
       Description,
       category,
     };
-    notes.push(noteObject);
+    existingmissions.push(newmissions);
 
-    localStorage.setItem("notes",JSON.stringify(notes));
-
-
+    localStorage.setItem("missions",JSON.stringify(existingmissions));
 
     settitle("");
     setDescription("");
     setcategory("");
     };
+
+
   return (
     <div>
       <div className="add-container">
@@ -64,7 +64,8 @@ function Add() {
        <button 
       type='button' 
       className='btn btn-primary btn-add'
-       onClick={addnote}>
+      onClick={missions}
+      >
         Deploy Mission
       </button>
       <div className="fixed-buttons">
